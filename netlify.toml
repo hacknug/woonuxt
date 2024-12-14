@@ -1,9 +1,9 @@
 [template.environment]
-  GQL_HOST = "WordPress URL http://example.com"
-  NUXT_IMAGE_DOMAINS = "Comma separated list of domains. example.com,example2.com"
+  GQL_HOST = "https://calero.nestor.codes/graphql"
+  NUXT_IMAGE_DOMAINS = "calero.nestor.codes"
 
 [build]
   command = "nuxt generate"
 
 [images]
-  remote_images = ["https://secure.woonuxt.com/.*"]
+  remote_images = ["https://calero.nestor.codes/.*"]
