@@ -1,13 +1,14 @@
 export default defineNuxtConfig({
-  compatibilityDate: '2024-07-09',
-  future: {
-    compatibilityVersion: 4,
-  },
-
   // Get all the pages, components, composables and plugins from the parent theme
   extends: ['./woonuxt_base'],
 
+  modules: ['@nuxt/eslint', '@nuxt/fonts'],
   components: [{ path: './components', pathPrefix: false }],
+
+  future: {
+    compatibilityVersion: 4,
+  },
+  compatibilityDate: '2024-07-09',
 
   /**
    * Depending on your servers capabilities, you may need to adjust the following settings.
@@ -25,14 +26,15 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ['@nuxt/fonts'],
+  eslint: {
+    config: { stylistic: true },
+  },
   fonts: {
     defaults: {
       weights: [400, 700],
     },
   },
-
   i18n: {
     defaultLocale: 'es_ES',
   },
-});
+})

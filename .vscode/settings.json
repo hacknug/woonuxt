@@ -1,5 +1,21 @@
 {
+  "eslint.useFlatConfig": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "always",
+  },
+  "editor.quickSuggestions": {
+    "strings": true,
+  },
+  "files.associations": {
+    "*.css": "tailwindcss",
+  },
   "i18n-ally.localesPaths": [
-    "woonuxt_base/app/locales"
-  ]
+    "woonuxt_base/app/locales",
+  ],
+  "tailwindCSS.experimental.classRegex": [
+    "tw`(.*?)`",
+    "tw\\('(.*?)'\\)",
+    "tw\\(\\s*('(.*?)'|\"(.*?)\")\\s*\\)"
+  ],
+  "vue.server.hybridMode": true,
 }
