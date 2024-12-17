@@ -24,4 +24,15 @@ export default defineNuxtConfig({
       failOnError: false,
     },
   },
+
+  modules: ['@nuxt/fonts'],
+  fonts: {
+    defaults: {
+      weights: [400, 700],
+    },
+  },
+
+  i18n: {
+    defaultLocale: 'es_ES',
+  },
 });
