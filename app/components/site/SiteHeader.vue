@@ -1,6 +1,6 @@
 <script setup lang="ts">
-const { isShowingSearch } = useSearching();
-const { toggleMobileMenu } = useHelpers();
+const { isShowingSearch } = useSearching()
+const { toggleMobileMenu } = useHelpers()
 </script>
 
 <template>
@@ -13,23 +13,17 @@ const { toggleMobileMenu } = useHelpers();
         <SiteLogo />
       </div>
 
-      <SiteHeaderNavigation
-        class="items-center hidden gap-6 text-sm text-gray-500 lg:flex lg:px-4"
-      />
+      <SiteHeaderNavigation class="items-center hidden gap-6 text-sm text-gray-500 lg:flex lg:px-4" />
 
-      <div class="flex justify-end items-center md:w-[160px] flex-1 ml-auto gap-4 md:gap-6">
-        <ProductSearch class="hidden sm:inline-flex max-w-[320px] w-[60%]" />
-        <SearchTrigger class="" />
-
-        <div class="flex gap-4 items-center">
-          <SignInLink />
-          <CartTrigger />
-        </div>
+      <div class="flex justify-end items-center md:w-[160px] flex-1 ml-auto gap-2">
+        <SiteHeaderSearch />
+        <SiteHeaderUser />
+        <SiteHeaderCart />
       </div>
     </div>
 
     <Transition name="scale-y" mode="out-in">
-      <div class="container mb-3 -mt-1 sm:hidden" v-if="isShowingSearch">
+      <div v-if="isShowingSearch" class="container mb-3 -mt-1 sm:hidden">
         <ProductSearch class="flex w-full" />
       </div>
     </Transition>

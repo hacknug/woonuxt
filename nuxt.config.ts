@@ -2,7 +2,12 @@ export default defineNuxtConfig({
   // Get all the pages, components, composables and plugins from the parent theme
   extends: ['./woonuxt_base'],
 
-  modules: ['@nuxt/eslint', '@nuxt/fonts'],
+  modules: [
+    '@nuxt/eslint',
+    '@nuxt/fonts',
+    '@nuxt/ui',
+  ],
+
   components: [{ path: './components', pathPrefix: false }],
 
   future: {
