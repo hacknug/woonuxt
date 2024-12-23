@@ -24,4 +24,8 @@ export default defineAppConfig({
     initStoreOnUserActionToReduceServerLoad: true,
     saleBadge: 'percent', // 'percent', 'onSale' or 'hidden'
   },
-});
+
+  ui: {
+    primary: 'purple',
+  },
+})

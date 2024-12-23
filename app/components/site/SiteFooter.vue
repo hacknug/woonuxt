@@ -1,11 +1,11 @@
 <script setup lang="ts">
-const { t } = useI18n();
-const { wishlistLink } = useAuth();
+const { t } = useI18n()
+const { wishlistLink } = useAuth()
 
 type NavigationItem = {
-  terms: { label: string }[];
-  definitions: { label: string; to: string }[];
-};
+  terms: { label: string }[]
+  definitions: { label: string, to: string }[]
+}
 
 const navigation: NavigationItem[] = [
   {
@@ -46,8 +46,8 @@ const navigation: NavigationItem[] = [
       { label: t('messages.account.myAccount') },
     ],
     definitions: [
-      { label: t('messages.account.myAccount'), to: '/my-account/' },
-      { label: t('messages.shop.orderHistory'), to: '/my-account/?tab=orders' },
+      { label: t('messages.account.myAccount'), to: '/user' },
+      { label: t('messages.shop.orderHistory'), to: '/user/?tab=orders' },
       { label: t('messages.shop.wishlist'), to: wishlistLink.value },
       { label: t('messages.general.newsletter'), to: '/' },
     ],

@@ -21,4 +21,5 @@
     "tw\\(\\s*('(.*?)'|\"(.*?)\")\\s*\\)"
   ],
   "vue.server.hybridMode": true,
+  "i18n-ally.keystyle": "nested",
 }

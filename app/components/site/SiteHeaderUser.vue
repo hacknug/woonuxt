@@ -10,19 +10,19 @@ const items = computed(() => (viewer.value?.email
         { label: viewer.value?.email ?? '', slot: 'account', disabled: true },
       ],
       [
-        { label: 'My Account', icon: 'ion:person-outline', to: '/my-account' },
-        { label: 'Orders', icon: 'ion:bag-check-outline', to: '/my-account?tab=orders', exact: true },
-        { label: 'Downloads', icon: 'ion:cloud-download-outline', to: '/my-account?tab=downloads', exact: true },
+        { label: 'My Account', icon: 'ion:person-outline', to: '/user' },
+        { label: 'Orders', icon: 'ion:bag-check-outline', to: '/user/?tab=orders', exact: true },
+        { label: 'Downloads', icon: 'ion:cloud-download-outline', to: '/user/?tab=downloads', exact: true },
         { label: 'Wishlist', icon: 'ion:heart-outline', to: wishlistLink.value, exact: true },
       ],
       [
-        { label: 'Sign out', icon: isPending.value ? 'ion:load-a' : 'ion:log-out-outline', iconClass: isPending.value ? 'animate-spin' : '', click: logoutUser },
+        { label: 'Sign out', icon: isPending.value ? 'ion:load-c' : 'ion:log-out-outline', iconClass: isPending.value ? 'animate-spin' : '', click: logoutUser },
       ],
     ]
   : [
       [
-        { label: 'Sign In', icon: 'ion:log-in-outline', to: '/my-account' },
-        { label: 'Sign Up', icon: 'ion:person-add-outline', to: '/my-account?action=register' },
+        { label: 'Sign In', icon: 'ion:log-in-outline', to: '/user' },
+        { label: 'Sign Up', icon: 'ion:person-add-outline', to: '/user/?action=register' },
       ],
     ]))
 </script>
