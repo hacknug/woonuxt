@@ -1,6 +1,10 @@
 <script setup lang="ts">
-const { t } = useI18n()
+const { t, locales, locale, setLocaleCookie } = useI18n()
 const { wishlistLink } = useAuth()
+
+watch(locale, (newLocale) => {
+  if (newLocale) setLocaleCookie(newLocale)
+})
 
 type NavigationItem = {
   terms: { label: string }[]
@@ -13,10 +17,10 @@ const navigation: NavigationItem[] = [
       { label: 'Information' },
     ],
     definitions: [
-      { label: 'About', to: 'https://github.com/scottyzen/woonuxt?tab=readme-ov-file#next-generation-front-end-for-woocommerce' },
+      { label: 'About', to: '/' },
       { label: 'Careers', to: '/' },
       { label: 'Press', to: '/' },
-      { label: 'FAQ\'s', to: 'https://woonuxt.com/faq' },
+      { label: 'FAQ\'s', to: '/' },
     ],
   },
   {
@@ -61,16 +65,23 @@ const navigation: NavigationItem[] = [
       <div class="mr-auto col-span-full xl:col-span-2">
         <SiteLogo />
         <WebsiteShortDescription />
-        <LangSwitcher class="mt-8" />
+        <USelect
+          v-model="locale"
+          class="mt-8"
+          :options="locales"
+          valueAttribute="code"
+          optionAttribute="name"
+          aria-label="Language switcher"
+        />
       </div>
 
-      <template v-for="list in navigation">
+      <template v-for="(list, key) in navigation" :key>
         <div class="">
-          <template v-for="term in list.terms">
+          <template v-for="(term, i) in list.terms" :key="i">
             <div class="mb-1 font-semibold">{{ term.label }}</div>
           </template>
           <div class="text-sm">
-            <template v-for="definition in list.definitions">
+            <template v-for="(definition, i) in list.definitions" :key="i">
               <NuxtLink :to="definition.to" class="py-1.5 block">{{ definition.label }}</NuxtLink>
             </template>
           </div>
