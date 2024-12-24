@@ -1,9 +1,9 @@
 <script setup lang="ts">
 const { rating = 0, count = null, size = 14, hideCount = false } = defineProps<{
-  rating?: number;
-  count?: number;
-  size?: number;
-  hideCount?: boolean;
+  rating?: number
+  count?: number
+  size?: number
+  hideCount?: boolean
 }>()
 </script>
 

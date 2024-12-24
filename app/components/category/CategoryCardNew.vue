@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 const { node } = defineProps<{
-  node: ProductCategory;
+  node: ProductCategory
 }>()
 </script>
 

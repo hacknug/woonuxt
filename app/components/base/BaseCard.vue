@@ -1,9 +1,9 @@
 <script setup lang="ts">
-const route = useRoute();
-const { FALLBACK_IMG } = useHelpers();
+const route = useRoute()
+const { FALLBACK_IMG } = useHelpers()
 
 const { node } = defineProps<{
-  node: Product | ProductCategory;
+  node: Product | ProductCategory
 }>()
 
 // const imgWidth = 280;
