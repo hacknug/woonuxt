@@ -17,10 +17,9 @@ const navigation: NavigationItem[] = [
       { label: 'Information' },
     ],
     definitions: [
-      { label: 'About', to: '/' },
-      { label: 'Careers', to: '/' },
-      { label: 'Press', to: '/' },
-      { label: 'FAQ\'s', to: '/' },
+      { label: 'About', to: '/about' },
+      { label: 'Servicios', to: '/servicios' },
+      { label: 'Contact', to: '/contact' },
     ],
   },
   {
