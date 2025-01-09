@@ -9,7 +9,7 @@ const { node } = defineProps<{
 <template>
   <BaseCard :node>
     <template #figure>
-      <SaleBadge :node class="absolute top-2 right-2" />
+      <ProductSaleBadge :node class="absolute top-2 right-2" />
     </template>
     <template #default="{ className }">
       <ProductRating v-if="storeSettings.showReviews" :rating="node.averageRating!" :count="node.reviewCount!" />
