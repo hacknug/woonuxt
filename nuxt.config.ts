@@ -10,6 +10,10 @@ export default defineNuxtConfig({
 
   components: [{ path: './components', pathPrefix: false }],
 
+  colorMode: {
+    preference: 'light',
+  },
+
   future: {
     compatibilityVersion: 4,
   },
