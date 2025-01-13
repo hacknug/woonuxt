@@ -10,8 +10,8 @@ const sections = [
     description: [
       'Tradición joyera desde 1862, actualmente 5º generación.',
       'Con el paso del tiempo la familia Calero ha estado presente en Zaragoza proporcionando servicios a joyerías y empresas, desde el modelado de cera, la fundición, o el repasado de piezas en taller, año tras año hemos ido actualizando nuestro equipamiento hasta disponer de  las últimas tecnologías, desde soldadura laser, impresión 3D y lo último en microfusión nos ha brindado la posibilidad de realizar todo tipo de piezas, si tú puedes imaginarlo nosotros te lo fabricamos.',
-      'Generación tras generación han ido absorbiendo los conocimientos de las anteriores generaciones hasta llegar a donde estamos hoy. En nuestra historia cabe destacar el trabajo de nuestro abuelo y bisabuelo que realizaron piezas tan increíbles para nuestra ciudad como el libro de oro del pilar, diferentes calices de varias iglesias o la Virgen de la Dolorosa.'
-    ]
+      'Generación tras generación han ido absorbiendo los conocimientos de las anteriores generaciones hasta llegar a donde estamos hoy. En nuestra historia cabe destacar el trabajo de nuestro abuelo y bisabuelo que realizaron piezas tan increíbles para nuestra ciudad como el libro de oro del pilar, diferentes calices de varias iglesias o la Virgen de la Dolorosa.',
+    ],
   },
   {
     title: 'CADA ENCARGO PERSONALIZADO',
@@ -20,13 +20,13 @@ const sections = [
       'Nuestros años de experiencia en el sector son nuestra garantía de profesionalidad, una experiencia que crece con cada día de trabajo y que estimulamos con una formación continuada, ofreciendo las últimas tendencias y novedades en joyería, piezas de orfebrería a medida y diseños personalizados.',
       'Somos especialistas en diamantes y piedras de color. Nuestras piezas con oro y piedras preciosas van acompañadas de un certificado de garantía.',
       'Realizamos cualquier tipo de joya.',
-      'Tenemos un compromiso: que nuestros clientes siempre se vayan satisfechos.'
-    ]
+      'Tenemos un compromiso: que nuestros clientes siempre se vayan satisfechos.',
+    ],
   },
   {
     title: 'COMPROMISO DE CALIDAD',
     description: [
-      'Todos nuestros productos son manufacturados por nosotros, todas las gemas que tenemos son compradas a diferentes proveedores que respetan en su totalidad que el proceso de extracción sea respetuoso con el medio ambiente, de la misma manera los diamantes son proporcionados por proveedores autorizados que nos proporcionan las mejores piezas de la mejor calidad, siempre respetando el proceso Kimberley que nos asegura que los diamantes han tenido una correcta trazabilidad.'
+      'Todos nuestros productos son manufacturados por nosotros, todas las gemas que tenemos son compradas a diferentes proveedores que respetan en su totalidad que el proceso de extracción sea respetuoso con el medio ambiente, de la misma manera los diamantes son proporcionados por proveedores autorizados que nos proporcionan las mejores piezas de la mejor calidad, siempre respetando el proceso Kimberley que nos asegura que los diamantes han tenido una correcta trazabilidad.',
     ],
   },
   {
@@ -40,7 +40,7 @@ const sections = [
 
 <template>
   <NuxtLayout :title :description name="page">
-    <template v-for="section in sections">
+    <template v-for="(section, key) in sections" :key>
       <BaseSection v-bind="section" />
     </template>
   </NuxtLayout>
