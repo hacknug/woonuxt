@@ -28,7 +28,7 @@ useSeoMeta({
           <OrderList v-else-if="activeTab === 'orders'" />
           <DownloadList v-else-if="activeTab === 'downloads'" />
           <!-- NOTE: only `<WishList>` is used in other pages -->
-          <WishList v-else-if="activeTab === 'wishlist'" />
+          <UserWishlist v-else-if="activeTab === 'wishlist'" />
         </main>
       </div>
     </template>

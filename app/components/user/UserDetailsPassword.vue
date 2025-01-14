@@ -48,7 +48,7 @@ const onSubmit = async () => {
 </script>
 
 <template>
-  <UserDetailsSection :state :isLoading :title="$t('messages.account.changePassword')" :submit="$t('messages.account.updatePassword')" @submit="onSubmit">
+  <UserBaseForm :state :isLoading :title="$t('messages.account.changePassword')" :submit="$t('messages.account.updatePassword')" @submit="onSubmit">
     <UFormGroup :label="$t('messages.account.newPassword')" name="passwordOne" required>
       <UInput v-model="state.passwordOne" type="text" placeholder="••••••••••" autocomplete="new-password" required />
     </UFormGroup>

@@ -31,7 +31,7 @@ const onSubmit = async () => {
 </script>
 
 <template>
-  <UserDetailsSection :state :isLoading :title="$t('messages.account.personalInfo')" :submit="$t('messages.account.updateDetails')" @submit="onSubmit">
+  <UserBaseForm :state :isLoading :title="$t('messages.account.personalInfo')" :submit="$t('messages.account.updateDetails')" @submit="onSubmit">
     <UFormGroup :label="$t('messages.billing.firstName')" name="firstName">
       <UInput v-model="state.firstName!" type="text" placeholder="John" autocomplete="given-name" />
     </UFormGroup>
